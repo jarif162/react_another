@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import InputGroup from "./components/InputGroup";
 
 function App() {
   //contact form-name,email,phone,country,isAgree
@@ -77,15 +78,13 @@ function App() {
     <>
       <div>
         <form action="" onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+          <InputGroup
+            htmlFor={"name"}
             onChange={handleChange}
-            placeholder="Enter your name"
-            required
+            value={formData.name}
+            type={"text"}
+            name={"name"}
+            label={"Name"}
           />
           <br />
           <br />
